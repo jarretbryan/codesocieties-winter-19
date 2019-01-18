@@ -40,13 +40,14 @@ Melanie Hoff and  Taeyoon Choi
 - 1/7/18
 - [Code Societies Slides Keynote Form](https://drive.google.com/open?id=1D4QJYRNgNyuj5ebva-69A8cevwQkHCBn)
 - [Code Societies Slides PDF Form](https://drive.google.com/open?id=1w8iVjJ8Ioman0Ne0wXw3jJSNGPOKFt_b)
+- [Blog Post](https://github.com/SFPC/codesocieties-winter-19/blob/master/intro-to-code-societies.md)
 
 An introduction to Code Societies as the session's theme and it's prompt along with an introduction to SFPC from Taeyoon Choi.
 
 ### Computational Methods of Code Societies
 Melanie Hoff and Nabil Hassein
 - 1/8/19
-- https://github.com/SFPC/codesocieties-winter-19/blob/master/computational-methods-of-code-societies.md
+- https://github.com/SFPC/codesocieties-winter-19/blob/master/blog/computational-methods-of-code-societies.md
   
 A one-session class covering the primary computational methods of Code Societies Classes: Winter 2019. 
 Together we will defamiliarize and refamiliarize ourselves with the Command Line Interface, Git/Github, running Python 3 in the terminal, & running Python 3 with Anaconda Jupyter Notebook.  We will navigate folder structure narratives with the command line, time travel with Git, code socially with Github, and process language with Python.
@@ -83,13 +84,15 @@ Distributed Web of Care is an initiative to code to care and code carefully. In 
 
 ### WYFY: Exorcizing Technology
 BUFU
-- July 12th
+- 1/12/2019
+- https://docs.google.com/document/d/1TMuCytOWLwIFkJtzQLmnStxE4UGuAjXVOYuZGmh8J9U/edit
 
 Whose world is this? The World is Ours. Together students will work thru a Beta version of BUFUs latest experimental model on organizing WYFY - a project seeking to invite us to rethinking how we build space online// IRL for our most equitable future. We will also participate in various meditative exercises to exorcize technology.
 
 ### Ethicsware
 Dan Taeyoung
 - 1/15/2019
+- https://github.com/dantaeyoung/Ethicsware/
 
 Much of the technology we encounter in our daily lives takes the form of a service, and of servitude. Our desires are taken as a given, and technology attempts for fulfillment. 
 
@@ -109,6 +112,9 @@ The internet as we live with it today could be conceived of as one of the most a
 ### Cybernetics of Sex: Technology, Feminisms, & the Choreography of Culture
 Melanie Hoff
 - 1/17/2019
+- https://github.com/melaniehoff/cyberneticsofsex/blob/master/README.md
+
+An introduction to cybernetics — the study of control systems in machines and living things. Through the example of sexual reproduction and the ways sex is often translated as gender, we will look at regulatory systems and feedback loops in the technological frameworks in which we are embedded and in the social pressures that govern our behavior. We will tease out social patterns and norms that emerge over time, through bodies, and come together to create culture.
 
 ### we play programmed.
 FlucT
@@ -144,3 +150,6 @@ Critical Simulation is a workshop session in part about the dominant simulations
  This idea of difference as difficulty, of the tabula rasa as a starting point, has failed us over and over again. What alternative simulations for living might there be, which technology and social models could be based upon? How do current simulations embed this fantasy of the frontier into ideology, in which we exist and move in voids without pasts? How does digital space allow for a kind of nihilism, a happy bliss in which this void is preferable, the past erased along an endlessly receding horizon, its motives disappeared?
  What would models that acknowledge context, history, and “facts,” begin to look like? We have at our hands, in the Internet, the effect of an Akashic record that can pull up all material on the “difficult” societies, violent histories, and systemic oppressions – but no simulation builds these materials into their foundational models.
  Simulate until you make it: we will together design our own models as a class. How can we work with and through the techno-utopian ideal of starting over, that is so deeply embedded into engineering? How do we make simulations that allow for difficulty and complexity and contradictory, clashing personal and social histories? Who do we imagine living on in the future? How are the worlds we are engineering today making life untenable for the models that aren’t included or created to begin with? How do we move from living on the edges of simulations, and possibly into the center of the worlds we move through? 
+
+
+### 🔥UPDATE! [Code Societies: Winter 2019 Students Cooperative Web Page](https://code-societies-collaborative-web-page.hashbase.io/) 
