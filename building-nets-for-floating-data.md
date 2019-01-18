@@ -1,12 +1,8 @@
 # Day 4: Building Nets for Floating Data
 
-Building Nets for Floating Data is a one-session class on scraping information from websites, including text, images, and source code. We will talk about potential uses of large datasets, look at examples of artworks that use scraping as their informational backbone, and survey the ecosystem of online information gathering at large.
+_Building Nets for Floating Data is a one-session class on scraping information from websites, including text, images, and source code. We will talk about potential uses of large datasets, look at examples of artworks that use scraping as their informational backbone, and survey the ecosystem of online information gathering at large._
 
-We will discuss popular alternatives to scraping, from APIs (online communication portals that serve data from organizations) to pre-gathered datasets uploaded to Github (for machine learning and other tasks). We will talk about this type of packaged data, as well as bias that is so often contained within.
-
-By web-scraping without going through an organizational or corporate medium, we are able to make datasets that are more flexible, personal, and just. We are able to pull information from websites, organizations, or individuals that do not have the overhead to provide an official access point, as well as to build systems that help push back against the social, racial, economic, and other biases so often contained in large datasets. We may also be able to circumnavigate political or corporate ‘locks’ on data, scraping information that may be hidden.
-
-After getting a handle on the landscape of web-scraping at large, we will talk about the type of websites that are easy to work with and look over example code in Python 3 and Node.js. By the end of the class, everyone will have a working web-scraper on their machine to use in the future.
+[Link to Full Syllabus](https://docs.google.com/document/d/1I1kM6lD8zPUvxakIujNj0HeUdmYFVAwnrt0s18BvMMQ/edit)
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -18,7 +14,7 @@ It is important to consider what kind of data these corporations want you, a dev
 
 The other alternative, precompiled datasets, which are often hosted on sites like Github or institutional datastores created for both academic and nonacademic research, share many of the same shortcomings as APIs. Precompiled datasets are commonly used to fed machine learning models and depending on the methodologies used to coalesce the data, emulate different sets of biases. Biased data creates biased machine learning models which magnify and reproduce problems that already exist.
 
-Biased data and the products created from them have massive repercussions on our experiences of the everyday. It can influence voter turnout; it can be used to justify violence against communities that are already hyper-policed. Machine learning will not save us from our subjectivity. Furthermore, APIs and precompiled datasets don't often reflect space on the internet that do not have the personal resources or the technological skillsets to create them. They do not provide access to communities on the margins that cannot publicize themselves. 
+Biased data and the products created from them have massive repercussions on our experiences of the everyday. It can influence voter turnout; it can be used to justify violence against communities that are already hyper-policed. Machine learning will not save us from our subjectivity. Furthermore, APIs and precompiled datasets rarely reflect space online spaces that do not have the personal resources or the technological skillsets to quantify and represent themselves in these ways. They do not provide access to communities on the margins that cannot publicize themselves. 
 
 We then moved on to talk more in-depth about web scraping. What is it and why would we want to use it? Web scraping is a code based methodology for pulling data off websites without having to go through official portals or access points. Web scraping gives us, independent researchers, technologists, artists,
 the ability to bypass corporations and governmental agencies in our pursuit of data and information. We can be more careful, more tactical in where we choose to source from and who we seek to represent in our datasets. "Scraping is perfect for data that is ungathered, under-respected, or generally lacks the resources to be bundled into a set; data that is "floating."
@@ -43,12 +39,21 @@ Everest went on to show us examples of work made by:
 
 ## Build Yourself a Web Scraper
 
-**These instructions are specific to macOS.**
+**These instructions are specific to macOS,** but should also work on most UNIX/LINUX machines. 
+
+If you're new to programming, consider going through our [day 2 blog post, Computational Methods of Code Societies,](https://github.com/SFPC/codesocieties-winter-19/blob/master/blog/computational-methods-of-code-societies.md) before beginning for an overview of terminal and command line basics. Our final product will be a python file that outputs the contents of `http://ppg.thebrownhouse.org/`, a hobbiest's power paragliding website with an easily traversible table structure.
+ 
 
 Before we begin you will need to handle a few installations.
+
 - `pip`, the offical python package manager
+- `python3`, the lastest version of python
 - `BeautifulSoup4`, a web-scraping library
 - `requests`, a library for making HTTP requests
+
+Follow these instructions to [install python3](https://wsvincent.com/install-python3-mac/). After installing python3, check if pip is installed by running `pip --version` in your terminal. If you see anything that's not an error messgae, you're good to skip the `sudo easy_install pip` step. 
+
+Now, run these commands in your terminal to install pip, BeautifulSoup, and requests before moving on.
 
 ```python
 # you will need admin privledges to your machine
@@ -57,43 +62,24 @@ pip install BeautifulSoup4
 pip install requests
 ```
 
-Create a file in your directory of choice called `scraper.py`, and in it copy and paste the code below. We'll start by sending a GET request to `http://ppg.thebrownhouse.org/`, a hobbiest's power paragliding website with an easily traversible table structure.
+Create a file in your directory of choice called `scraper.py`, and in it copy and paste the code below. This code will send an [HTTP GET](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) request to `http://ppg.thebrownhouse.org/`, use the BeautifulSoup library to parse through the site, and then print the page contents to your terminal.
 
 ```python
-import requests
-page = requests.get("http://ppg.thebrownhouse.org/")
-
-# this will print out the status code onto your console
-# a successful request will output 200
-print(page)
-```
-
-```python
-import requests
-page = requests.get("http://ppg.thebrownhouse.org/")
-# now change page to page.content
-print(page.content)
-```
-
-
-```python
-# now use beautiful soup to print a prettified version of the site
+# import the required python libraries into our file
 from bs4 import BeautifulSoup, SoupStrainer
 import requests
+
+# send GET request
 page = requests.get("http://ppg.thebrownhouse.org/")
+
+# this function returns the page content and stores it in
+# a variable called soup 
 soup = BeautifulSoup(page.content, 'html.parser')
+
+# print our soup to the console
 print(soup.prettify())
-
 ```
 
-```python
-from bs4 import BeautifulSoup, SoupStrainer
-import requests
-page = requests.get("http://ppg.thebrownhouse.org/")
-soup = BeautifulSoup(page.content, 'html.parser')
-
-# get a list of all the child elements on the page
-print(list(soup.children))
-```
+Run your web scraper by typing `python3 scraper.py` into your terminal. Make sure that you do this in the same directory that the file is in.
 
 Congratulations! You now have a web scrapper running on your local machine. Checkout [BeautifulSoup's](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) documentation for more ways to use the library.
